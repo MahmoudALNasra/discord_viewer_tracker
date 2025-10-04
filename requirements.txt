@@ -1,0 +1,3 @@
+discord.py>=2.3.0
+pysqlite3-binary
+python-dotenv
