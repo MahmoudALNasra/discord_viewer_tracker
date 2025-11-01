@@ -188,7 +188,7 @@ class VoiceTrackerBot(commands.Bot):
     async def auto_backup(self):
         """Automatically backup every 6 hours"""
         await self.wait_until_ready()
-        await asyncio.sleep(60)
+        await asyncio.sleep(1000)
         
         while not self.is_closed():
             try:
