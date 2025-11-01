@@ -188,7 +188,7 @@ class VoiceTrackerBot(commands.Bot):
     async def auto_backup(self):
         """Automatically backup every 6 hours"""
         await self.wait_until_ready()
-        await asyncio.sleep(1000)
+        await asyncio.sleep(60)
         
         while not self.is_closed():
             try:
@@ -210,7 +210,7 @@ class VoiceTrackerBot(commands.Bot):
                     
             except Exception as e:
                 logger.error(f"❌ Auto-backup task error: {e}")
-                await asyncio.sleep(3600)
+                await asyncio.sleep(60)
 
     async def on_voice_state_update(self, member, before, after):
         await self.tracker.handle_voice_state_update(member, before, after)
