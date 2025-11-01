@@ -1,0 +1,15 @@
+{
+  "export_date": "2025-11-01T23:15:07.433414",
+  "backup_timestamp": "20251101_231506",
+  "voice_users": [
+    {
+      "user_id": 1335025865217675347,
+      "username": "User_1335025865217675347",
+      "total_voice_time": 25.653003,
+      "sessions": 1
+    }
+  ],
+  "streamers": [],
+  "voice_users_count": 1,
+  "streamers_count": 0
+}
