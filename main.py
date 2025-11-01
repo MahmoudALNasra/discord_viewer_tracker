@@ -190,15 +190,20 @@ class VoiceTrackerBot(commands.Bot):
         self.database = VoiceTrackerDatabase(db_path=config.DB_PATH)
         self.tracker = VoiceTimeTracker(self.database)
         self.github_backup = GitHubBackup()
-        
-        # Setup git (non-blocking)
-        self.loop.create_task(self.setup_backup_system())
+
+    async def setup_hook(self):
+        """This is called when the bot is starting up"""
+        # Setup git
+        await self.setup_backup_system()
 
     async def setup_backup_system(self):
         """Setup backup system after bot is ready"""
-        await asyncio.sleep(10)  # Wait a bit after startup
-        self.github_backup.setup_git()
-        logger.info("✅ Backup system initialized")
+        # Run git setup in thread to avoid blocking
+        success = await asyncio.get_event_loop().run_in_executor(None, self.github_backup.setup_git)
+        if success:
+            logger.info("✅ Backup system initialized")
+        else:
+            logger.warning("⚠️ Backup system setup had issues")
 
     async def on_ready(self):
         logger.info(f"✅ {self.user} has connected to Discord!")
