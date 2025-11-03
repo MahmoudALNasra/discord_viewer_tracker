@@ -1,0 +1,40 @@
+{
+  "export_date": "2025-11-03T17:27:12.812099",
+  "backup_timestamp": "20251103_172712",
+  "voice_users": [
+    {
+      "user_id": 233709053149184022,
+      "username": "User_233709053149184022",
+      "total_voice_time": 1815.048673,
+      "sessions": 2
+    },
+    {
+      "user_id": 241318564655661056,
+      "username": "User_241318564655661056",
+      "total_voice_time": 1697.1607929999998,
+      "sessions": 5
+    },
+    {
+      "user_id": 1054550729475510413,
+      "username": "User_1054550729475510413",
+      "total_voice_time": 627.702621,
+      "sessions": 1
+    },
+    {
+      "user_id": 1335025865217675347,
+      "username": "User_1335025865217675347",
+      "total_voice_time": 31.811762,
+      "sessions": 1
+    }
+  ],
+  "streamers": [
+    {
+      "user_id": 1335025865217675347,
+      "username": "User_1335025865217675347",
+      "total_stream_time": 908.226075,
+      "sessions": 1
+    }
+  ],
+  "voice_users_count": 4,
+  "streamers_count": 1
+}
